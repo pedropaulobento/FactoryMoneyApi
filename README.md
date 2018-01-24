@@ -1,3 +1,3 @@
 # FactoryMoneyApi
 
-Api REST desenvolvida com Spring-boot para o curso de Spring-Boot com Angular 4 da AlgaWorks
+Api REST desenvolvida com Spring-boot com banco de dados mysql e deploy no Heroku
