@@ -8,3 +8,4 @@ target/
 .project
 .settings
 .springBeans
+/.apt_generated_tests/

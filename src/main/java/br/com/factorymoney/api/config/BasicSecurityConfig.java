@@ -1,7 +1,6 @@
 package br.com.factorymoney.api.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -24,7 +23,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 	
-	@Bean
+	@Autowired
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
