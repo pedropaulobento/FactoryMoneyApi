@@ -122,7 +122,7 @@ public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
 				root.get(Lancamento_.categoria), criteriaBuilder.sum(root.get(Lancamento_.valor))));
 
 		LocalDate primeirodia = mesReferencia.withDayOfMonth(1);
-		LocalDate ultimoDia = mesReferencia.withDayOfYear(mesReferencia.lengthOfMonth());
+		LocalDate ultimoDia = mesReferencia.withDayOfMonth(mesReferencia.lengthOfMonth());
 
 		criteriaQuery.where(criteriaBuilder.greaterThanOrEqualTo(root.get(Lancamento_.dataVencimento), primeirodia),
 				criteriaBuilder.lessThanOrEqualTo(root.get(Lancamento_.dataVencimento), ultimoDia));
@@ -144,7 +144,7 @@ public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
 				root.get(Lancamento_.dataVencimento), criteriaBuilder.sum(root.get(Lancamento_.valor))));
 
 		LocalDate primeirodia = mesReferencia.withDayOfMonth(1);
-		LocalDate ultimoDia = mesReferencia.withDayOfYear(mesReferencia.lengthOfMonth());
+		LocalDate ultimoDia = mesReferencia.withDayOfMonth(mesReferencia.lengthOfMonth());
 
 		criteriaQuery.where(criteriaBuilder.greaterThanOrEqualTo(root.get(Lancamento_.dataVencimento), primeirodia),
 				criteriaBuilder.lessThanOrEqualTo(root.get(Lancamento_.dataVencimento), ultimoDia));
